@@ -71,3 +71,40 @@ chart_data=pd.DataFrame(
     columns=['a','b','c'])
 st.write(chart_data)
 st.line_chart(chart_data)
+
+#st.altair_chart
+# import altair as alt
+# from vega_datasets import data
+
+# source=data.cars()
+
+# chart=alt.Chart(source).mark_circle().encode(
+#     x='Horsepower',
+#     y='Miles_per_Gallon',
+#     color='Origin'
+# ).interactive()
+# tab1,tab2=st.tabs(["Streamlit theme (default)", "Altair native theme"])
+
+# with tab1:
+#     st.altair_chart(chart, theme='streamlit', use_container_width=True)
+# with tab2:
+#     st.altair_chart(chart,theme=None, use_container_width=True)
+
+#st.selectbox
+st.header('st.selectbox')
+
+option=st.selectbox(
+    "What's your favorite color?",
+    ('Blue','Green','Red'))
+
+st.write('Your favorite color is ',option)
+
+#st.multiselect
+st.header('st.multiselect')
+
+options=st.multiselect(
+    "What are your favorite colors?",
+    ['Blue', 'Green', 'Red', 'Yellow'],
+    ['Yellow', 'Red'])
+
+st.write("Your favorite colors are ", options)
