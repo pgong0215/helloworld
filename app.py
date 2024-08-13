@@ -64,4 +64,10 @@ start_time=st.slider('When do you start',
                      format="MM/DD/YY - hh:mm")
 st.write("Start time:",start_time)
 
-# git test
+# st.line_chart
+st.header('Line chart')
+chart_data=pd.DataFrame(
+    np.random.randn(20,3),
+    columns=['a','b','c'])
+st.write(chart_data)
+st.line_chart(chart_data)
