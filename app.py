@@ -35,7 +35,6 @@ c=alt.Chart(df2).mark_circle().encode(
 
 st.write(c)
 
-
 # st.slider
 import streamlit as st
 from datetime import time, datetime
